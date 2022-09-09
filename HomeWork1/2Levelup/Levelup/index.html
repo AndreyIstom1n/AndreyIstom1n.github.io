@@ -1,0 +1,102 @@
+<!Doctype html>
+<html lang ="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание №1</title>
+</head>
+<body>
+    <h1>Список ссылок и форма HTML:</h1>
+    <h2>Ссылки:</h2>
+    <ol>
+        <li><a href="http://www.example.com">Абсолютная гиперссылка на главную страницу сайта</a></li>
+        <li><a href="https://www.example.com">Абсолютная на главную сайта example.com в протоколе https</a></li>
+        <li><a href="ftp://ftp.ubisoft.com/">Ссылку на файл на сервере FTP без авторизации</a> </li>
+        <li><a href="ftp://andrey:webinter@example.com/AllFiles/file.txt">Ссылку на файл на сервере FTP с авторизацией</a></li>
+        <li><a href="https://ru.wikipedia.org/wiki/Времена_года_(Вивальди)#Концерт_№_1_ми_мажор_«Весна»,_RV_269">Ссылку на фрагмент страницы некоторого сайта</a></li>
+        <li><a href= #picture>Ссылка на фрагмент текущей страницы (картинка)</a></li>
+        <li><a href="https://www.dns-shop.ru/catalog/17a892f816404e77/noutbuki/?f[676]=26o8&fr[65w]=11.6-14.1">Cсылку с двумя параметрами в URL</a></li>
+        <li>Список ссылок основной навигации сайта с подписями title
+            <ul>
+                <nav>
+                    <li><a href="index.html"title="Главная страница сайта">Главная страница сайта</a></li>
+                    <li><a href="#picture"title="Картинка">Картинка</a></li>
+                    <li><a href="#map"title="Ссылки из областей картинки">Ссылки из областей картинки</a></li>
+                    <li><a href="#bottom"title="Конец страницы">Конец страницы</a></li>
+                </nav>
+            </ul>
+        </li>
+        <li><a>Ссылка без href</a></li>
+        <li><a href="">Ссылка с пустым href</a></li>
+        <li><a href="https://example.com"rel="nofollow">Ссылка, по которой запрещен переход поисковикам</a></li>
+        <li><a href="https://example.com"><noindex>Ссылка, запрещенная для индексации поисковиками</noindex></a></li>
+        <li>Нажав <a href="#form">СЮДА</a>, Вы перейдете к заполнению Формы HTML</li>
+        <li><a href="example/picture.jpg" id="picture"><img src="example/picture.jpg" alt="Кот"style="width: 656px;height: 656px;"></a></li>
+        <li><map name ="yandex">
+            <area shape="rect"coords="311,110,744,285"href="https://hd.kinopoisk.ru"alt="Прямоугольник">
+            <area shape="circle"coords="168,184,115"href="https://market.yandex.ru" alt="Круг">
+            </map>
+            <a id="map"><img src="example/figures.png"usemap="#yandex"alt="map"></a>
+        <br /><em>(Треугольник не является круглой или прямоугольной фигурой, следовательно, не будет являться ссылкой-изображением)</em>
+        </li>
+        <li><a href="demo.html">Относительная ссылка на страницу в текущем каталоге</a></li>
+        <li><a href="about/page.html">Относительная ссылка на страницу в каталоге about</a></li>
+        <li><a href="../levelago.html">Относительная ссылка на страницу в каталоге уровнем выше текущего</a></li>
+        <li><a href="../../2levelago.html">Относительная ссылка на страницу в каталоге двумя уровнями выше текущего</a></li>
+        <li><a href="index.html">Сокращенная ссылка на главную страницу</a></li>
+        <li><a href="inside/form.html">Сокращенная ссылка на внутреннюю страницу</a></li>
+    </ol>
+    <h2>Форма HTML</h2>
+    <form action="/"
+    method="POST">
+        Ваше имя:<br/>
+            <label>
+            <input name="field-name">
+            </label><br/><br/>
+        Ваша электронная почта:<br/>
+            <label>
+            <input name="field-email"
+            type="email"
+            placeholder="example@mail.ru"/>
+            </label><br/><br/>
+        Ваша дата рождения:<br/>
+            <label>
+            <input name="field-date"
+            value="1-01-01"
+            type="date">
+            </label></br><br/>
+        Ваш пол:<br/>
+            <label><input type="radio" value="m"name="radio-group-1"/>Мужской</label>
+            <label><input type="radio" value="w"name="radio-group-1"/>Женский</label>
+            <label><input type="radio" value="o"name="radio-group-1"/>Другой</label><br/><br/>
+        Количество Ваших конечностей:<br/>
+            <label><input type="radio" value="0"name="radio-group-2"/>0</label>
+            <label><input type="radio" value="1"name="radio-group-2"/>1</label>
+            <label><input type="radio" value="2"name="radio-group-2"/>2</label>
+            <label><input type="radio" value="3"name="radio-group-2"/>3</label>
+            <label><input type="radio" value="4"name="radio-group-2"/>4</label>
+            <label><input type="radio" value="5"name="radio-group-2"/>5</label>
+            <label><input type="radio" value="6"name="radio-group-2"/>6</label>
+            <label><input type="radio" value="7+"name="radio-group-2"/>7+</label><br/><br/>
+        Ваши сверхспособности:<br/>
+            <label><select name="field-skills"
+            multiple="multiple">
+                <option value="un">Бессмертие</option>
+                <option value="gh">Прохождение сквозь стены</option>
+                <option value="fl">Левитация</option>
+            </select></label><br/><br/>
+        Ваша биография:<br/>
+            <label>
+            <textarea name="field-bio"></textarea>
+            </label><br/><br/>
+        Чекбокс<br/>
+            <label>
+                <input type="checkbox"
+                name="check-1"/>С контрактом ознакомлен(а)
+            </label><br/><br/>
+        <input type="submit"value="Отправить"/>
+    </form>
+    <bottom>
+        <a id="bottom"></a>
+    </bottom>
+</body>
+</html>
